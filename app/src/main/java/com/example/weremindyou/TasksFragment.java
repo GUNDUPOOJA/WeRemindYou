@@ -30,24 +30,6 @@ public class TasksFragment<button> extends Fragment {
 
         return getView();
     }
-    public void onAddClick(view v)
-    {
 
-<<<<<<< HEAD
-    }
 }
 
-
-=======
-//    public void onClick(View view) {
-//        openMainActivity2();
-//    }
-
-//
-//    public void openMainActivity2() {
-//        Intent intent = new Intent(this,openMainActivity2().class);
-//        startActivity(intent);
-//
-//    }
-}
->>>>>>> a3eed50546c498ebd0a55724ad8b2686954088e6

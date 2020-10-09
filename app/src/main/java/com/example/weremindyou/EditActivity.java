@@ -30,7 +30,3 @@ public class EditActivity extends AppCompatActivity {
 
     }
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> fe702c4a25f894cddd765a5093770228045fbc6e
