@@ -29,8 +29,4 @@ public class EditActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 065f7673bd36fd5d72a2cf6338fa28f8330506c4
