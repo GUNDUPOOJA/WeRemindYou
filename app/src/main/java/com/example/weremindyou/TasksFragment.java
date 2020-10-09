@@ -8,33 +8,32 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 
 import androidx.fragment.app.Fragment;
 
 import java.util.List;
 
-public class TasksFragment extends Fragment {
+public class TasksFragment<button> extends Fragment {
     private ListView taskList;
+    Button newtask;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         taskList = (ListView) getView().findViewById(R.id.task_list);
         // TaskListAdapter taskListAdapter = listener.getTaskListAdapter();
-        // taskList.setAdapter(taskListAdapter);
+        //  taskList.setAdapter(taskListAdapter);
         //taskList.setOnItemClickListener(listOnItemClickListener); // making it editable
         registerForContextMenu(taskList); // choose edit or delete
 
         return getView();
     }
-    public void onClick(View view) {
-       openeditActivity2 ();
-    }
-
-    public void openeditActivity2() {
-        Intent intent = new Intent(this,EditActivity.class)
-        startActivity(intent);
+    public void onAddClick(view v)
+    {
 
     }
 }
+
+

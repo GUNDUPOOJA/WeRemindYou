@@ -1,8 +1,13 @@
 <resources>
+<<<<<<< HEAD
     <string name="WeRemindYou">WeRemindYou</string>
+=======
+
+    <string name="app_name">We Remind You</string>
+>>>>>>> 642874587c89dea214b828956787ed3fa6cdeb39
     <string name="new_task">New Task</string>
     <string name="open">open</string>
     <string name="close">close</string>
     <string name="help">Simply add, edit and delete your reminders. If you have any questions, go have a beer.</string>
->>>>>>> c94e45901dbec38d474e35e58b7de83133da8bab
+
 </resources>
