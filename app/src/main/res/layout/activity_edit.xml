@@ -12,7 +12,7 @@
         android:layout_height="0dp"
         android:layout_weight="1">
 
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -20,7 +20,7 @@
 
             <TextView
                 style="@style/widget"
-                android:text="Task" />
+                android:text="Reminder" />
 
             <EditText
                 android:id="@+id/name"
@@ -42,7 +42,38 @@
 
             </LinearLayout>
 
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="8sp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Priority" />
+
+                <RadioButton
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Low" />
+
+                <RadioButton
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Medium" />
+
+                <RadioButton
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="High" />
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -53,40 +84,80 @@
                     android:layout_width="0sp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_weight="2"
-                    android:onClick="onDateClick" />
+                    android:layout_weight="2" />
 
                 <Button
                     android:id="@+id/time_button"
                     android:layout_width="0sp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:onClick="onTimeClick" />
+                    android:layout_weight="1" />
 
             </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:id="@+id/placeDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <Button
+                        android:id="@+id/getadd"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_alignRight="@+id/placeDetail"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="15dp"
+                        android:drawableRight="@drawable/ic_location_on_blue_24dp"
+                        android:paddingRight="15dp"
+                        android:text="Select Location"/>
+
+                    <TextView
+                        android:id="@+id/placename"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/reminderTime"
+                        android:layout_marginTop="20dp"
+                        android:text="Place Name"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/placeadd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Place Address"
+                        android:textSize="17sp"
+                        android:layout_below="@+id/placename" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
 
         </LinearLayout>
 
     </ScrollView>
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
         android:orientation="horizontal"
         android:padding="8sp"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
 
         <Button
+            android:id="@+id/cancel"
             style="@style/edit_button"
-            android:id="@+id/done"
-            android:text="Done"
-            android:onClick="onDoneClick" />
+            android:text="Cancel" />
 
         <Button
+            android:id="@+id/done"
             style="@style/edit_button"
-            android:id="@+id/cancel"
-            android:text="Cancel"
-            android:onClick="onCancelClick" />
+            android:text="Done" />
 
     </LinearLayout>
 
