@@ -29,14 +29,14 @@ public class TasksFragment extends Fragment {
         return getView();
     }
 
-    public void onClick(View view) {
-        openMainActivity2();
-    }
+//    public void onClick(View view) {
+//        openMainActivity2();
+//    }
 
-
-    public void openMainActivity2() {
-        Intent intent = new Intent(this,openMainActivity2().class);
-        startActivity(intent);
-
-    }
+//
+//    public void openMainActivity2() {
+//        Intent intent = new Intent(this,openMainActivity2().class);
+//        startActivity(intent);
+//
+//    }
 }
