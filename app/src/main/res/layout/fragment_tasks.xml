@@ -9,7 +9,7 @@
     <Button
         style="@style/widget"
         android:id="@+id/add_task"
-        android:text="New Task"
+        android:text="@string/new_task"
         android:onClick="onAddClick" />
 
     <ListView
