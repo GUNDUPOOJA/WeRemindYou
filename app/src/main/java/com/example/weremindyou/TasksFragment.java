@@ -7,49 +7,36 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 
-public class TasksFragment {
+import androidx.fragment.app.Fragment;
 
+import java.util.List;
+
+public class TasksFragment extends Fragment {
     private ListView taskList;
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.riders_login);
-        taskList = findViewById(R.id.task_)
-        Intent I = getIntent();
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        taskList = (ListView) getView().findViewById(R.id.task_list);
+        // TaskListAdapter taskListAdapter = listener.getTaskListAdapter();
+        // taskList.setAdapter(taskListAdapter);
+        //taskList.setOnItemClickListener(listOnItemClickListener); // making it editable
+        registerForContextMenu(taskList); // choose edit or delete
+
+        return getView();
+    }
+
+    public void onClick(View view) {
+        openMainActivity2();
+    }
 
 
-        loginbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                String w = username.getText().toString();
-                String h = pswrd.getText().toString();
-
-                //tCost = tCost + parseDouble(w) * parseDouble(h) * rate;
-
-                Intent I = new Intent(getApplicationContext(), MainActivity.class);
-
-                setResult(successCode, I);
-                finish();
-
-            }
-        });
-
-        rgstrbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent I = new Intent(getApplicationContext(), MainActivity.class);
-
-                setResult(errorCode, I);
-                finish();;
-
-            }
-        });
+    public void openMainActivity2() {
+        Intent intent = new Intent(this,openMainActivity2().class);
+        startActivity(intent);
 
     }
 }
-
-}
-
