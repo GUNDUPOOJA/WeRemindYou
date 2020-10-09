@@ -25,8 +25,12 @@ public class EditActivity extends AppCompatActivity {
     }
 
     public void openMainActivity2() {
-        Intent intent = new Intent(this, MainActivity2.class);
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
 
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 065f7673bd36fd5d72a2cf6338fa28f8330506c4

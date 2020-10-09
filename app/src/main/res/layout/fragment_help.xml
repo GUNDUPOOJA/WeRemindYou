@@ -12,7 +12,8 @@
         android:layout_marginTop="50dp"
         android:padding="15dp"
         android:text="help"
-        android:textSize="15sp"
+        android:textSize="24sp"
+        android:textStyle="bold"
         tools:layout_editor_absoluteX="102dp"
         tools:layout_editor_absoluteY="149dp" />
 
