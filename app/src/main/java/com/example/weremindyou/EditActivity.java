@@ -19,18 +19,15 @@ public class EditActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openMainActivity2();
+                openTaskFragment();
             }
         });
     }
 
-    public void openMainActivity2() {
-        Intent intent = new Intent(this, MainActivity.class);
+    public void openTaskFragment() {
+        Intent intent = new Intent(this, TasksFragment.class);
         startActivity(intent);
 
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 065f7673bd36fd5d72a2cf6338fa28f8330506c4
+
