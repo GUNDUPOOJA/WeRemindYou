@@ -40,6 +40,7 @@ Users can keep the track of their day to day tasks. We Remind You app can be use
 
 - It shows the dashboard and it also consists of list view where all the remainders can be seen.
 - Here in the list view we can see the remainder with date, time and we can also have buttons to edit and delete the remainder.  
+
 ![Task List Activity](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/tasklist.PNG)
   
 ## Ringing Activity:
