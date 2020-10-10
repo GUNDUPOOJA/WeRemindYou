@@ -1,5 +1,6 @@
 package com.example.weremindyou;
 
+import android.content.Intent;
 import android.os.Bundle;
 //import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -22,11 +23,18 @@ public class TasksFragment  extends Fragment{
         // TaskListAdapter taskListAdapter = listener.getTaskListAdapter();
         //  taskList.setAdapter(taskListAdapter);
         //taskList.setOnItemClickListener(listOnItemClickListener); // making it editable
-        registerForContextMenu(taskList); // choose edit or delete
+//        registerForContextMenu(taskList); // choose edit or delete
 
 
         return view;
     }
+//    public void onNewbutton(View v)
+//    {
+//        Intent in = new Intent(this,EditActivity.class);
+//        startActivity(in);
+//        setContentView(R.layout.activity_edit);
+//
+//    }
 
 
 }

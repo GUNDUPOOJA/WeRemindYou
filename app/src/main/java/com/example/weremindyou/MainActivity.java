@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
 //                Log.d(g,"testing the app");
                Intent editIntent = new Intent(MainActivity.this, EditActivity.class);
                 startActivity(editIntent);
+                setContentView(R.layout.activity_edit);
             }
 
 
