@@ -1,7 +1,6 @@
 # WeRemindYou - Android Project
 
 ## App name : WeRemindYou
-## App logo : 
 
 ## Team members 
 1.	Nooka Raju Boddu
