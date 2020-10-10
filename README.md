@@ -29,28 +29,27 @@ Users can keep the track of their day to day tasks. We Remind You app can be use
 - One button to set the time.
 - One button “Done” to set the remainder.
 - One button to cancel the remainder.
-  ![Create Remainder](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/createRemainder.PNG)
+![Create Remainder](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/createRemainder.PNG)
   
 ## Task List Activity:
 - It shows the dashboard and it also consists of list view where all the remainders can be seen.
 - Here in the list view we can see the remainder with date, time and we can also have buttons to edit and delete the remainder.
-- ![Task List Activity](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/tasklist.PNG)
+![Task List Activity](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/tasklist.PNG)
   
 ## Ringing Activity:
 - It shows the page when the remainder is set and alarm ringing.
 - It shows the name/description of the remainder in TextView.
 - It also consists a button to dismiss the alarm which takes back to the dashboard.
-- ![Ringing Activity](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/ringing.PNG)
+![Ringing Activity](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/ringing.PNG)
   
 ## Menu Bar Activity:
 - In this the activity for the menu bar will be present which shows Dashboard, Help, Rate Us and Exit. 
 - In this it navigates the screen by clicking on different items in the menu.
-
-- ![Menu Bar Activity](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/menubar.PNG)
-- ![weremindyou2.PNG](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/weremindyou2.PNG)
-- ![weRemindyou1.PNG](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/weRemindyou1.PNG)
-- ![aboutus.PNG](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/aboutus.PNG)
-- ![rateus.PNG](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/rateus.PNG)
+![Menu Bar Activity](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/menubar.PNG)
+![weRemindyou1.PNG](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/weRemindyou1.PNG)
+![weremindyou2.PNG](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/weremindyou2.PNG)
+![aboutus.PNG](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/aboutus.PNG)
+![rateus.PNG](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/rateus.PNG)
 ## Persist:
 <p>Once the user sets the reminder for alarm and after dismissing it still the user can view the remainder in the dashboard add they can edit or delete that remainder. </p>
 
