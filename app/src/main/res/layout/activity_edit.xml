@@ -150,14 +150,16 @@
         android:layout_height="wrap_content">
 
         <Button
+            android:id="@+id/done"
+            style="@style/edit_button"
+            android:text="Done" />
+
+        <Button
             android:id="@+id/cancel"
             style="@style/edit_button"
             android:text="Cancel" />
 
-        <Button
-            android:id="@+id/done"
-            style="@style/edit_button"
-            android:text="Done" />
+
 
     </LinearLayout>
 
