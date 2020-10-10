@@ -57,7 +57,7 @@ Users can keep the track of their day to day tasks. We Remind You app can be use
 ![Menu Bar Activity](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/MenuBarActivity.PNG)
 ![weRemindyou1.PNG](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/weRemindyou1.PNG)  
 ![weremindyou2.PNG](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/weremindyou2.PNG)  
-![aboutus.PNG](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/aboutus.PNG)  
+![aboutus.PNG](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/AboutUs.PNG)  
 ![rateus.PNG](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/RateUs.PNG)
 
 ## Persist:
