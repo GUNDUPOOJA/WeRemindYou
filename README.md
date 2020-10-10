@@ -1,7 +1,7 @@
 # WeRemindYou - Android Project
 
-# App name : WeRemindYou
-# App logo : 
+## App name : WeRemindYou
+## App logo : 
 
 ## Team members 
 1.	Nooka Raju Boddu
@@ -15,6 +15,7 @@ Users can keep the track of their day to day tasks. We Remind You app can be use
 ##  Introduction to our Project:
 <p>We have a lot of things to do every day, doing housework, company work, meetings, birthday parties, phone calls, billings, television shows, etc. Memorizing everything and <br> managing it well is not easy, so a remainder app will be very helpful to manage all the things. <br>
 Reminder app is a simple event management application in which we can set the remainders with priorities like high,medium,low. And also, we can set the remainders based on <br> location.There will be pop-up window alerts and sound to make sure you don't miss any important event. <p>
+ 
 ## Layouts of our Project : 
 ## Main Activity: 
 - It is the dashboard which shows the screen having menu bar for selecting Dashboard, Help, Rate US, and Exit.
