@@ -54,7 +54,7 @@ Users can keep the track of their day to day tasks. We Remind You app can be use
 
 - In this the activity for the menu bar will be present which shows Dashboard, Help, Rate Us and Exit. 
 - In this it navigates the screen by clicking on different items in the menu.  
-![Menu Bar Activity](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/menubar.PNG)
+![Menu Bar Activity](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/MenuBarActivity.PNG)
 ![weRemindyou1.PNG](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/weRemindyou1.PNG)  
 ![weremindyou2.PNG](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/weremindyou2.PNG)  
 ![aboutus.PNG](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/aboutus.PNG)  
