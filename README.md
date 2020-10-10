@@ -19,7 +19,7 @@ Reminder app is a simple event management application in which we can set the re
 ## Main Activity: 
 - It is the dashboard which shows the screen having menu bar for selecting Dashboard, Help, Rate US, and Exit.
 -	We also have a button to create new remainder which takes us to the create remainder activity.
-![Main Activity](proposedscreens/mainactivity.png)
+![Main Activity]("C:\Users\s538295\AndroidStudioProjects\WeRemindYou\proposed screens\mainactivity.PNG")
   
 ## Create Remainder Activity:
 - Here the new remainder is created.
