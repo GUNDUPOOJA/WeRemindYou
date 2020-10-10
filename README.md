@@ -19,7 +19,7 @@ Reminder app is a simple event management application in which we can set the re
 ## Main Activity: 
 - It is the dashboard which shows the screen having menu bar for selecting Dashboard, Help, Rate US, and Exit.
 -	We also have a button to create new remainder which takes us to the create remainder activity.
- ![Main Activity]( )
+ [Main Activity](mainactivity.PNG)
   
 ## Create Remainder Activity:
 - Here the new remainder is created.
@@ -29,24 +29,27 @@ Reminder app is a simple event management application in which we can set the re
 - One button to set the time.
 - One button “Done” to set the remainder.
 - One button to cancel the remainder.
-  ![Create Remainder]()
+  ![Create Remainder](CreateRemainder.PNG)
   
 ## Task List Activity:
 - It shows the dashboard and it also consists of list view where all the remainders can be seen.
 - Here in the list view we can see the remainder with date, time and we can also have buttons to edit and delete the remainder.
-  ![Task List Activity]()
+  ![Task List Activity](tasklist.PNG)
   
 ## Ringing Activity:
 - It shows the page when the remainder is set and alarm ringing.
 - It shows the name/description of the remainder in TextView.
 - It also consists a button to dismiss the alarm which takes back to the dashboard.
-  ![Ringing Activity]()
+ ![Ringing Activity](ringing.PNG)
   
 ## Menu Bar Activity:
 - In this the activity for the menu bar will be present which shows Dashboard, Help, Rate Us and Exit. 
 - In this it navigates the screen by clicking on different items in the menu.
-![Menu Bar Activity]()
-
+- ![Menu Bar Activity](menubar.PNG)
+- ![aboutus.PNG]
+- ![rateus.PNG]
+- ![weRemindyou1.PNG]
+- ![weremindyou2.PNG]
 
 ## Persist:
 <p>Once the user sets the reminder for alarm and after dismissing it still the user can view the remainder in the dashboard add they can edit or delete that remainder. </p>
