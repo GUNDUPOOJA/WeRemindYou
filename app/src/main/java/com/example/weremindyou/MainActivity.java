@@ -14,7 +14,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.google.android.material.navigation.NavigationView;
+//import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private final int NEW_ACTIVITY = 0;
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle toggle;
-    private NavigationView navigationView;
+  //  private NavigationView navigationView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         try {

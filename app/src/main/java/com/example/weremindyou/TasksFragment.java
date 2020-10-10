@@ -1,19 +1,14 @@
 package com.example.weremindyou;
 
-import android.content.Context;
-import android.content.Intent;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ListView;
-
-import androidx.fragment.app.Fragment;
-
-import java.util.List;
 
 public class TasksFragment<button> extends Fragment {
     private ListView taskList;
@@ -30,10 +25,4 @@ public class TasksFragment<button> extends Fragment {
 
         return getView();
     }
-
-<<<<<<< HEAD
 }
-=======
-}
-
->>>>>>> b18c6cd7128051513513909bcaaa75f6c4551627
