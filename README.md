@@ -56,7 +56,7 @@ Users can keep the track of their day to day tasks. We Remind You app can be use
 - ![Menu Bar Activity](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/menubar.PNG)
 ![weRemindyou1.PNG](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/weRemindyou1.PNG)  
 ![weremindyou2.PNG](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/weremindyou2.PNG)  
-![aboutus.PNG](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/aboutus.PNG)
+![aboutus.PNG](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/aboutus.PNG)  
 ![rateus.PNG](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/RateUs.PNG)
 ## Persist:
 <p>Once the user sets the reminder for alarm and after dismissing it still the user can view the remainder in the dashboard add they can edit or delete that remainder. </p>
