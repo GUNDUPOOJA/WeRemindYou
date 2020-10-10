@@ -31,4 +31,9 @@ public class TasksFragment<button> extends Fragment {
         return getView();
     }
 
+<<<<<<< HEAD
 }
+=======
+}
+
+>>>>>>> b18c6cd7128051513513909bcaaa75f6c4551627
