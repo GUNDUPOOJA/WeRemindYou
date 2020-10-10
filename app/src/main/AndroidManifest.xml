@@ -9,7 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+<<<<<<< HEAD
         <activity android:name=".Ringing"></activity>
+=======
+        <activity android:name=".TasksFragment"></activity>
+        <activity android:name=".TaskFragment" />
+        <activity android:name=".EditActivity" />
+>>>>>>> fdabf0af48ad16b1d4fea7a3912829ff41e591af
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
