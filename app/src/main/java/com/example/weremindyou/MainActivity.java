@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
         createTask.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String g="he";
 //                Log.d(g,"testing the app");
                Intent editIntent = new Intent(MainActivity.this, EditActivity.class);
                 startActivity(editIntent);
