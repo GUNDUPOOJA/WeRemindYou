@@ -80,12 +80,12 @@ public class MainActivity extends AppCompatActivity {
         String tag="";
         try {
             Log.d(tag,"on Click");
-            Intent intent = new Intent(getBaseContext(), EditActivity.class);
+            Intent intent = new Intent(this, EditActivity.class);
 
-            currentTask = new Task();
-            currentTask.toIntent(intent);
-
-            MainActivity.this.startActivityForResult(intent, NEW_ACTIVITY);
+//            currentTask = new Task();
+//            currentTask.toIntent(intent);
+            this.startActivity(intent);
+//            MainActivity.this.startActivityForResult(intent, NEW_ACTIVITY);
         }catch(Exception e)
         {
 
