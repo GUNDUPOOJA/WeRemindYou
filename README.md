@@ -48,7 +48,7 @@ Users can keep the track of their day to day tasks. We Remind You app can be use
 - It shows the page when the remainder is set and alarm ringing.
 - It shows the name/description of the remainder in TextView.
 - It also consists a button to dismiss the alarm which takes back to the dashboard.
-![Ringing Activity](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/ringing.PNG)
+![Ringing Activity](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/RingingActivity.PNG)
   
 ## Menu Bar Activity:
 
