@@ -13,12 +13,12 @@
 
 Users can keep the track of their day to day tasks. We Remind You app can be used to set reminders for the tasks which they want to be reminded later. User can create the remainders without enabling it, they can set the remainders in specific date and time. In this application the users can also keep their locations in the reminders. Users can also set their reminder in priority wise so that the highest priority reminders could be done first and then later the medium and low priorities will be done. We Remind You app helps to manage your life easily.
 
-##  Introduction to our Project:
+##  Introduction:
 
 - We have a lot of things to do every day, doing housework, company work, meetings, birthday parties, phone calls, billings, television shows, etc. Memorizing everything and managing it well is not easy, so a remainder app will be very helpful to manage all the things. <br>
 - Reminder app is a simple event management application in which we can set the remainders with priorities like high,medium,low. And also, we can set the remainders based on location.There will be pop-up window alerts and sound to make sure you don't miss any important event.
  
-## Layouts of our Project : 
+## Layouts: 
 ## Main Activity: 
 
 - It is the dashboard which shows the screen having menu bar for selecting Dashboard, Help, Rate US, and Exit.
