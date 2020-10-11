@@ -35,6 +35,7 @@ Users can keep the track of their day to day tasks. We Remind You app can be use
 - One button “Done” to set the remainder.
 - One button to cancel the remainder.
 ![Create Remainder](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/createRemainder.PNG)
+![weRemindyou1.PNG](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/weRemindyou1.PNG)  
   
 ## Task List Activity:
 
@@ -42,6 +43,7 @@ Users can keep the track of their day to day tasks. We Remind You app can be use
 - Here in the list view we can see the remainder with date, time and we can also have buttons to edit and delete the remainder.  
 
 ![Task List Activity](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/TaskListActivity.PNG)
+![weremindyou2.PNG](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/WeRemindyou2.PNG)  
   
 ## Ringing Activity:
 
@@ -55,8 +57,6 @@ Users can keep the track of their day to day tasks. We Remind You app can be use
 - In this the activity for the menu bar will be present which shows Dashboard, Help, Rate Us and Exit. 
 - In this it navigates the screen by clicking on different items in the menu.  
 ![Menu Bar Activity](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/MenuBarActivity.PNG)
-![weRemindyou1.PNG](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/weRemindyou1.PNG)  
-![weremindyou2.PNG](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/WeRemindyou2.PNG)  
 ![aboutus.PNG](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/AboutUs.PNG)  
 ![rateus.PNG](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/RateUs.PNG)
 
