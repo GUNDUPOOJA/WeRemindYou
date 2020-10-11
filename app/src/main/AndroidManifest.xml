@@ -20,6 +20,10 @@
             </intent-filter>
         </activity>
         <activity android:name="com.example.weremindyou.EditActivity" />
+        <activity android:name="com.example.weremindyou.HelpFragment" />
+        <activity android:name="com.example.weremindyou.rateUsActivity" />
+
+
 
     </application>
 
