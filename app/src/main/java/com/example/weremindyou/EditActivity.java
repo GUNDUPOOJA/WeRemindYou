@@ -25,10 +25,10 @@ public class EditActivity extends AppCompatActivity {
     }
     public void onDoneClick(View v)
     {
-        Intent in = new Intent(this,TasksFragment.class);
+        Intent in = new Intent(this,MainActivity.class);
 //        setResult(RESULT_OK,in);
         startActivity(in);
-        setContentView(R.layout.fragment_tasks);
+      //  setContentView(R.layout.fragment_tasks);
 //        finish();
     }
 }
