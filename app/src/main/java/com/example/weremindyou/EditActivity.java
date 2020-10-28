@@ -27,6 +27,8 @@ public class EditActivity extends AppCompatActivity {
     {
         Intent in = new Intent(this,MainActivity.class);
 //        setResult(RESULT_OK,in);
+
+
         startActivity(in);
       //  setContentView(R.layout.fragment_tasks);
 //        finish();
