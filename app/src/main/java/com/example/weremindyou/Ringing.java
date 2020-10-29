@@ -58,7 +58,35 @@ public class Ringing extends AppCompatActivity {
         start(getIntent());
     }
 
-    private void start(Intent intent) {
+    @Override
+    protected void onDestroy()
+    {
+        super.onDestroy();
+
+        stop();
     }
+
+    private void start(Intent intent)
+    {
+        Log.d(TAG, "Start ringing...");
+
+        task = new Task();
+        task.fromIntent(intent);
+
+        textView.setText(task.getName());
+
+        playTimerTask = new PlayTimerTask();
+        timer = new Timer();
+        timer.schedule(playTimerTask, playTime);
+        ringtone.play();
+    }
+
+    private void stop()
+    {
+        Log.d(TAG, "Stop ringing...");
+        timer.cancel();
+        ringtone.stop();
+    }
+
 
 }
