@@ -15,9 +15,9 @@ public class HelpFragment extends AppCompatActivity {
         setContentView(R.layout.fragment_help);
 
 
-        }
-
     }
+
+}
 
 
 
