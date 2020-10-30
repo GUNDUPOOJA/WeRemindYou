@@ -15,6 +15,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -53,9 +54,13 @@ public class EditActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit);
+        init();
+        gettingValuesFromViews();
 
 
-        dateButton = (Button)findViewById(R.id.date_button);
+
+
+    dateButton = (Button)findViewById(R.id.date_button);
         timeButton = (Button)findViewById(R.id.time_button);
 
         task = new Task();
@@ -70,6 +75,9 @@ public class EditActivity extends AppCompatActivity {
 
         updateButtons();
     }
+
+    // In this method priority of the remainder i.e high,medium,low is set and also
+    //used toast to display a message if nothing selected.
     private void gettingValuesFromViews() {
 
         radioGroup.getCheckedRadioButtonId();
@@ -78,8 +86,22 @@ public class EditActivity extends AppCompatActivity {
             public void onClick(View view) {
                 name = editText_Name.getText().toString();
                 isEnabled = ((CheckBox) findViewById(R.id.enabled)).isChecked();
+                int selectedRadioButtonId = radioGroup.getCheckedRadioButtonId();
+                if (selectedRadioButtonId != -1) {
+                    selectedPriority = findViewById(selectedRadioButtonId);
+                    String selectedRbText = selectedPriority.getText().toString();
+                    Toast.makeText(EditActivity.this, "Title: "+name+"\nEnabled: "+isEnabled +"\nPriority: "+selectedRbText, Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(EditActivity.this, "Nothing selected from the radio group", Toast.LENGTH_SHORT).show();
+                }
             }
         });
+    }
+
+    private void init() {
+        editText_Name = findViewById(R.id.name);
+        radioGroup = findViewById(R.id.radiobutton_priority);
+        btn_done = findViewById(R.id.done);
     }
 
     public void onCancelClick(View view)
