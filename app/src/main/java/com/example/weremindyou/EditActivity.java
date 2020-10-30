@@ -13,6 +13,7 @@ import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TimePicker;
 
 
@@ -33,13 +34,14 @@ public class EditActivity extends AppCompatActivity {
     private int day;
     private int hour;
     private int minute;
-    private EditText name;
-    private CheckBox enabled;
-    private RadioButton low;
-    private RadioButton medium;
-    private RadioButton high;
+    RadioGroup radioGroup;
+    RadioButton selectedPriority;
+    EditText editText_Name;
+    boolean isEnabled ;
+    String name;
     private Button dateButton;
     private Button timeButton;
+    Button btn_done;
 
     static final int DATE_DIALOG_ID = 0;
     static final int TIME_DIALOG_ID = 1;
@@ -52,11 +54,7 @@ public class EditActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit);
 
-        name = (EditText)findViewById(R.id.name);
-        enabled = (CheckBox)findViewById(R.id.enabled);
-        low = (RadioButton)findViewById(R.id.lowBt);
-        medium = (RadioButton)findViewById(R.id.mediumBt);
-        high = (RadioButton)findViewById(R.id.highBt);
+
         dateButton = (Button)findViewById(R.id.date_button);
         timeButton = (Button)findViewById(R.id.time_button);
 
@@ -72,6 +70,18 @@ public class EditActivity extends AppCompatActivity {
 
         updateButtons();
     }
+    private void gettingValuesFromViews() {
+
+        radioGroup.getCheckedRadioButtonId();
+        btn_done.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                name = editText_Name.getText().toString();
+                isEnabled = ((CheckBox) findViewById(R.id.enabled)).isChecked();
+            }
+        });
+    }
+
     public void onCancelClick(View view)
     {
         setResult(RESULT_CANCELED, null);
