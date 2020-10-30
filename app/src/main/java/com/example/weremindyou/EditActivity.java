@@ -36,6 +36,7 @@ public class EditActivity extends AppCompatActivity {
     Button dateButton;
     Button timeButton;
     Button btn_done;
+    TimePickerDialog picker;
     int mYear, mMonth, mDay, mHour, mMinute;
 
     @Override
@@ -59,6 +60,14 @@ public class EditActivity extends AppCompatActivity {
                 calendar=Calendar.getInstance();
                 mHour = calendar.get(Calendar.HOUR_OF_DAY);
                 mMinute = calendar.get(Calendar.MINUTE);
+                // time picker dialog
+                picker = new TimePickerDialog(EditActivity.this, new TimePickerDialog.OnTimeSetListener() {
+                    @Override
+                    public void onTimeSet(TimePicker timePicker, int sHour, int sMinute) {
+                        Toast.makeText(EditActivity.this, sHour + ":" + sMinute,Toast.LENGTH_SHORT).show();
+                    }
+                },mHour,mMinute,true);
+                picker.show();
             }
         });
         btn_done.setOnClickListener(new View.OnClickListener() {
