@@ -9,7 +9,8 @@
     <Button
         android:id="@+id/add_task"
         style="@style/widget"
-        android:text="@string/new_reminder" />
+        android:text="New Reminder"
+        android:onClick="onAddClick"/>
 
     <ListView
         style="@style/widget"
