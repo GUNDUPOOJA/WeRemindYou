@@ -36,7 +36,8 @@ public class EditActivity extends AppCompatActivity {
     Button dateButton;
     Button timeButton;
     Button btn_done;
-    TimePickerDialog picker;
+    TimePickerDialog timePicker;
+    DatePickerDialog datePicker;
     int mYear, mMonth, mDay, mHour, mMinute;
 
     @Override
@@ -61,15 +62,39 @@ public class EditActivity extends AppCompatActivity {
                 mHour = calendar.get(Calendar.HOUR_OF_DAY);
                 mMinute = calendar.get(Calendar.MINUTE);
                 // time picker dialog
-                picker = new TimePickerDialog(EditActivity.this, new TimePickerDialog.OnTimeSetListener() {
+                timePicker = new TimePickerDialog(EditActivity.this, new TimePickerDialog.OnTimeSetListener() {
                     @Override
                     public void onTimeSet(TimePicker timePicker, int sHour, int sMinute) {
                         Toast.makeText(EditActivity.this, sHour + ":" + sMinute,Toast.LENGTH_SHORT).show();
                     }
                 },mHour,mMinute,true);
-                picker.show();
+                timePicker.show();
             }
         });
+        dateButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Get Current Date
+                calendar = Calendar.getInstance();
+                mYear = calendar.get(Calendar.YEAR);
+                mMonth = calendar.get(Calendar.MONTH);
+                mDay = calendar.get(Calendar.DAY_OF_MONTH);
+
+                datePicker = new DatePickerDialog(EditActivity.this,
+                        new DatePickerDialog.OnDateSetListener() {
+                            @Override
+                            public void onDateSet(DatePicker datePicker, int year, int monthOfYear
+                                    , int dayOfMonth) {
+                                Toast.makeText(EditActivity.this, dayOfMonth + "-"
+                                        + (monthOfYear + 1) + "-" + year, Toast.LENGTH_SHORT).show();
+
+                            }
+                        },mYear,mMonth,mDay);
+                datePicker.show();
+
+            }
+        });
+
         btn_done.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -91,6 +116,9 @@ public class EditActivity extends AppCompatActivity {
         editText_Name = findViewById(R.id.name);
         radioGroup = findViewById(R.id.radiobutton_priority);
         btn_done = findViewById(R.id.done);
+        dateButton = findViewById(R.id.date_button);
+        timeButton = findViewById(R.id.time_button);
+        calendar = Calendar.getInstance();
     }
 
     public void onCancelClick(View view)
@@ -98,6 +126,7 @@ public class EditActivity extends AppCompatActivity {
         setResult(RESULT_CANCELED, null);
         finish();
     }
+    
     public void onDoneClick(View v)
     {
         Intent in = new Intent(this,MainActivity.class);
