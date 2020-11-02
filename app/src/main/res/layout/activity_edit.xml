@@ -20,11 +20,12 @@
 
             <TextView
                 style="@style/widget"
-                android:text="@string/reminder" />
+                android:text="Add Reminder" />
 
             <EditText
                 android:id="@+id/name"
                 style="@style/widget"
+                android:hint="Title "
                 android:singleLine="true" />
 
             <LinearLayout
@@ -38,7 +39,7 @@
                     android:layout_width="0sp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/enabled" />
+                    android:text="enabled" />
 
             </LinearLayout>
 
@@ -51,7 +52,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/priority" />
+                    android:text="Priority" />
 
                 <RadioGroup
                     android:id="@+id/radiobutton_priority"
@@ -62,19 +63,19 @@
                         android:layout_width="0sp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="@string/low" />
+                        android:text="Low" />
 
                     <RadioButton
                         android:layout_width="0sp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="@string/medium" />
+                        android:text="Medium" />
 
                     <RadioButton
                         android:layout_width="0sp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="@string/high" />
+                        android:text="High" />
                 </RadioGroup>
             </LinearLayout>
 
@@ -122,7 +123,7 @@
                         android:layout_marginTop="15dp"
                         android:drawableRight="@drawable/ic_location_on_blue_24dp"
                         android:paddingRight="15dp"
-                        android:text="@string/select_location"/>
+                        android:text="select_location"/>
 
                     <TextView
                         android:id="@+id/placename"
@@ -130,7 +131,7 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/reminderTime"
                         android:layout_marginTop="20dp"
-                        android:text="@string/place_name"
+                        android:text="place_name"
                         android:textSize="17sp"
                         android:textStyle="bold" />
 
@@ -160,13 +161,13 @@
         <Button
             android:id="@+id/done"
             style="@style/edit_button"
-            android:text="@string/done" />
+            android:text="Done" />
 
         <Button
             android:id="@+id/cancel"
             style="@style/edit_button"
             android:onClick="onCancelClick"
-            android:text="@string/cancel" />
+            android:text="Cancel" />
 
 
     </LinearLayout>
