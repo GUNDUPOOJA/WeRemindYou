@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import java.util.Calendar;
 
-import static com.example.alaramclock.AlarmBroadcastReceiver.TITLE;
+import static com.example.weremindyou.AlarmBroadcastReceiver.TITLE;
 
 public class Alarm {
 
