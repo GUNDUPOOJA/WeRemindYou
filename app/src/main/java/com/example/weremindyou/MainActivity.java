@@ -2,11 +2,14 @@ package com.example.weremindyou;
 
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -16,31 +19,51 @@ import android.widget.DatePicker;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.GregorianCalendar;
 
 
 public class MainActivity extends AppCompatActivity {
 
-
+    DBHelper helper = new DBHelper(this);
     Button createTask;
+    RecyclerView recyclerView;
+    ArrayList<Alarm> arrayList = new ArrayList<>();
+    MyAdapter adapter;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        String t = null;
+        if(t==null){
+            Log.d("str45","is empty");}
+
         createTask = findViewById(R.id.taskBtn);
+        recyclerView = findViewById(R.id.task_list);
+        loadData();
 
         createTask.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent editIntent = new Intent(MainActivity.this, EditActivity.class);
                 startActivity(editIntent);
-                // setContentView(R.layout.activity_edit);
+
             }
         });
 
     }
+    public void loadData() {
 
-    @Override
+
+        arrayList = helper.getAllData();
+        recyclerView.setLayoutManager(new GridLayoutManager(this, 1));
+        adapter = new MyAdapter(this, arrayList);
+        recyclerView.setAdapter(adapter);
+    }
+
+        @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.nav_menu, menu);
         return true;

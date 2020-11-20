@@ -2,13 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:id="@+id/dashboard"
-        android:icon="@drawable/ic_list_black_24dp"
+        android:icon="@drawable/ic_baseline_dashboard_24"
         android:title="Dashboard"/>
-    <item android:id="@+id/help"
-        android:icon="@drawable/ic_question_answer_black_24dp"
-        android:title="Help"/>
+    <item
+        android:id="@+id/help"
+        android:icon="@drawable/ic_baseline_help_24"
+        android:title="About us" />
     <item android:id="@+id/rateUs"
-        android:icon="@drawable/ic_question_answer_black_24dp"
+        android:icon="@drawable/ic_baseline_star_rate_24"
         android:title="Rate Us"/>
 
 </menu>
