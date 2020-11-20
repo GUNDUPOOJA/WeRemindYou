@@ -39,6 +39,7 @@
                     android:layout_width="0sp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:checked="true"
                     android:text="enabled" />
 
             </LinearLayout>
@@ -60,18 +61,21 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                     <RadioButton
+                        android:id="@+id/low"
                         android:layout_width="0sp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Low" />
 
                     <RadioButton
+                        android:id="@+id/medium"
                         android:layout_width="0sp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Medium" />
 
                     <RadioButton
+                        android:id="@+id/high"
                         android:layout_width="0sp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -121,7 +125,7 @@
                         android:layout_alignRight="@+id/placeDetail"
                         android:layout_gravity="right"
                         android:layout_marginTop="15dp"
-                        android:drawableRight="@drawable/ic_location_on_blue_24dp"
+                        android:drawableRight="@drawable/ic_baseline_location_on_24"
                         android:paddingRight="15dp"
                         android:text="select_location"/>
 
