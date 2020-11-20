@@ -137,6 +137,43 @@ public class DBHelper extends SQLiteOpenHelper {
 
             }
         }
+        for (result.moveToFirst(); !result.isAfterLast(); result.moveToNext()) {
+            Log.d("s","----------------------------");
+            Log.d("id",result.getInt(0)+"");
+            Log.d("alarm_id",result.getInt(1)+"");
+            Log.d("title",result.getString(2)+"");
+            Log.d("enabled",result.getInt(3)+"");
+            Log.d("priority",result.getString(4)+"");
+            Log.d("hour",result.getInt(5)+"");
+            Log.d("minute",result.getInt(6)+"");
+            Log.d("date",result.getInt(7)+"");
+            Log.d("month",result.getString(8)+"");
+            Log.d("day",result.getString(9)+"");
+            Log.d("location",result.getString(10)+"");
+        }
+
+        db2.close();
+        return list;
+    }
+
+
+
+
+    public void DeleteAllData(String tbl)
+    {
+        db =this.getReadableDatabase();
+        String query = "delete FROM "+tbl;
+        db.execSQL(query);
+        db.close();
+    }
+
+    public void delete(int id)
+    {
+        db =this.getWritableDatabase();
+        String query = "DELETE FROM "+TABLE_NAME+" WHERE alaram_id = "+id;
+        db.execSQL(query);
+    }
+
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL(CREATE_TABLE);
