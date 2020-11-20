@@ -1,5 +1,15 @@
 package com.example.weremindyou;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Context;
+import android.content.Intent;
+import android.util.Log;
+import android.widget.Toast;
+
+import java.util.Calendar;
+
+import static com.example.alaramclock.AlarmBroadcastReceiver.TITLE;
 
 public class Alarm {
 
@@ -23,7 +33,6 @@ public class Alarm {
         this.priority = priority;
         this.location = location;
     }
-
 
 
     public int getId() {
@@ -110,11 +119,55 @@ public class Alarm {
     public void setPriority(String priority) {
         this.priority = priority;
     }
-    
+
     public Alarm(int alarmId, int hour, int minute) {
         this.alarmId = alarmId;
         this.hour = hour;
         this.minute = minute;
+    }
+
+    public void schedule(Context context, Alarm alarm,Calendar calendar,boolean edit_action) {
+        Log.d("edit inside schedule",edit_action+"");
+        AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+
+        Intent intent = new Intent(context, AlarmBroadcastReceiver.class);
+        intent.putExtra(TITLE, title);
+
+        PendingIntent alarmPendingIntent = PendingIntent.getBroadcast(context, alarmId, intent, 0);
+
+//        Calendar calendar = Calendar.getInstance();
+//        calendar.setTimeInMillis(System.currentTimeMillis());
+//        calendar.set(Calendar.HOUR_OF_DAY, hour);
+//        calendar.set(Calendar.MINUTE, minute);
+        calendar.set(Calendar.SECOND, 0);
+        calendar.set(Calendar.MILLISECOND, 0);
+
+        // if alarm time has already passed, increment day by 1
+        if (calendar.getTimeInMillis() <= System.currentTimeMillis()) {
+            calendar.set(Calendar.DAY_OF_MONTH, calendar.get(Calendar.DAY_OF_MONTH) + 1);
+        }
+
+        String toastText = null;
+        try {
+            toastText = String.format("One Time Alarm %s scheduled for %s at %02d:%02d with_ID: %s", title, alarm.getDay(), alarm.getHour(), alarm.getMinute(), alarm.getAlarmId());
+            // toastText = String.format("One Time Alarm %s scheduled for %s at %02d:%02d", title, DayUtil.toDay(calendar.get(Calendar.DAY_OF_WEEK)), hour, minute, alarmId);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        Toast.makeText(context, toastText, Toast.LENGTH_LONG).show();
+
+        helper = new DBHelper(context);
+        if(edit_action){
+            Log.d("edit inside if",edit_action+"");
+            helper.updateAlarm(alarm);
+        }
+        else
+        {
+            helper.addAlarm(alarm);
+        }
+
+
+
     }
 
 }
