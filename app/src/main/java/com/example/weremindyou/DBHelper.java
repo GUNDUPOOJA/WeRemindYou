@@ -85,6 +85,28 @@ public class DBHelper extends SQLiteOpenHelper {
         db.close();
         return list;
     }
+
+    public  void addAlarm(Alarm alarm){
+        Log.d("BookHelper","Inserting a record");
+        db = this.getWritableDatabase();
+        ContentValues cv =new ContentValues();
+
+        cv.put("alaram_id",alarm.getAlarmId());
+        cv.put("title",alarm.getTitle());
+        cv.put("enabled",alarm.isEnabled());
+        cv.put("priority",alarm.getPriority());
+        cv.put("hour",alarm.getHour());
+        cv.put("minute",alarm.getMinute());
+
+        cv.put("date",alarm.getDate());
+
+        cv.put("month",alarm.getMonth());
+        cv.put("day",alarm.getDay());
+
+        db.insert(TABLE_NAME,null,cv);
+
+        getAllData();
+    }
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL(CREATE_TABLE);
