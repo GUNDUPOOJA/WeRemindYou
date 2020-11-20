@@ -31,9 +31,13 @@
         <activity android:name="com.example.weremindyou.EditActivity" />
         <activity android:name="com.example.weremindyou.HelpFragment" />
         <activity android:name="com.example.weremindyou.rateUsActivity" />
+        <activity android:name=".Ringing"/>
 
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps">
 
-
+        </activity>
     </application>
 
 </manifest>
