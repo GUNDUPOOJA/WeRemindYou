@@ -27,6 +27,9 @@ public class App extends Application {
                     "Alarm Service Channel",
                     NotificationManager.IMPORTANCE_NONE
             );
+
+            NotificationManager manager = getSystemService(NotificationManager.class);
+            manager.createNotificationChannel(serviceChannel);
         }
     }
 }
