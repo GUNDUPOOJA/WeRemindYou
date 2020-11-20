@@ -21,6 +21,15 @@
 <!--            android:value="@string/YOUR_API_KEY"></meta-data>-->
 
 
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps">
+        </activity>
+
+        <activity android:name=".Ringing"/>
+        <activity android:name=".EditActivity" />
+        <activity android:name=".HelpFragment" />
+        <activity android:name=".rateUsActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,16 +37,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.weremindyou.EditActivity" />
-        <activity android:name="com.example.weremindyou.HelpFragment" />
-        <activity android:name="com.example.weremindyou.rateUsActivity" />
-        <activity android:name=".Ringing"/>
 
-        <activity
-            android:name=".MapsActivity"
-            android:label="@string/title_activity_maps">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
 
-        </activity>
+        <receiver android:name=".AlarmBroadcastReceiver"></receiver>
+
+        <service android:name=".AlarmService" />
     </application>
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
