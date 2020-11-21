@@ -98,9 +98,9 @@ Users can keep the track of their day to day tasks. We Remind You app can be use
 
 ## References :
 - [For adding API key](https://youtu.be/0ZSg58AV8r8)
-- ![sqlite](https://www.youtube.com/watch?v=yzwJr-JM7yc)
-- ![app logo](https://apkpure.com/alarm-clock-beyond-talking-alarm-radio-music/com.sentryapplications.alarmclock)
-- 
+- [sqlite](https://www.youtube.com/watch?v=yzwJr-JM7yc)
+- [app logo](https://apkpure.com/alarm-clock-beyond-talking-alarm-radio-music/com.sentryapplications.alarmclock)
+
 
 ## Persist:
 <p>Once the user sets the reminder for alarm and after dismissing it still the user can view the remainder in the dashboard add they can edit or delete that remainder. </p>
