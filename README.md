@@ -36,8 +36,10 @@ Users can keep the track of their day to day tasks. We Remind You app can be use
 
 - The apps opens up with this page which has dashboard menu and a new reminder option for the user to create the reminder.
 
-![Main Activity]<img src="https://github.com/nrajubn/WeRemindYou/blob/master/Images/MainActivity.jpeg" width="400" height="400">
-  
+<img src=
+"https://github.com/nrajubn/WeRemindYou/blob/master/Images/MainActivity.jpeg"
+        alt="Main Activity" width="300" height="300">
+        
 ## Create Remainder Activity:
 - In this activity, users can create the reminder by entering the details like the reminder name, date, time,a checkbox to enable the reminder and also the priority like high,medium,low and the location option.
 
