@@ -39,27 +39,36 @@ Users can keep the track of their day to day tasks. We Remind You app can be use
 <img src=
 "https://github.com/nrajubn/WeRemindYou/blob/master/Images/MainActivity.jpeg"
         alt="Main Activity" width="300" height="300">
-        
+
 ## Create Remainder Activity:
 - In this activity, users can create the reminder by entering the details like the reminder name, date, time,a checkbox to enable the reminder and also the priority like high,medium,low and the location option.
 
-![AddRemainder](https://github.com/nrajubn/WeRemindYou/blob/master/Images/AddRemainder.jpeg)
+<img src=
+"https://github.com/nrajubn/WeRemindYou/blob/master/Images/AddRemainder.jpeg"
+        alt="Add Remainder" width="300" height="300">
 
 - In this Activity, Time dialog will appear for selecting the time while creating the reminder.
 
-![TimePicker](https://github.com/nrajubn/WeRemindYou/blob/master/Images/TimePicker.jpeg)
-
+<img src=
+"https://github.com/nrajubn/WeRemindYou/blob/master/Images/TimePicker.jpeg"
+        alt="Time Picker" width="300" height="300">
 - while setting a new reminder, user can select the date from the date picker dialog.
 
-![DatePicker](https://github.com/nrajubn/WeRemindYou/blob/master/Images/DatePicker.PNG)
+<img src=
+"https://github.com/nrajubn/WeRemindYou/blob/master/Images/DatePicker.PNG"
+        alt="Date Picker" width="300" height="300">
 
 - Select location button to set the location. 
 
-![Location](https://github.com/nrajubn/WeRemindYou/blob/master/Images/Location.jpeg)
+<img src=
+"https://github.com/nrajubn/WeRemindYou/blob/master/Images/Location.jpeg"
+        alt="Location" width="300" height="300">
 
 - In this Activity, google maps will appear on the screen when the user clicks on the select location button to set the location while creating a reminder.
 
-![LocationPicker](https://github.com/nrajubn/WeRemindYou/blob/master/Images/LocationPicker.jpeg)
+<img src=
+"https://github.com/nrajubn/WeRemindYou/blob/master/Images/LocationPicker.jpeg"
+        alt="LocationPicker" width="300" height="300">
 
 ## Task List Activity:
 
@@ -67,43 +76,61 @@ Users can keep the track of their day to day tasks. We Remind You app can be use
 
 - Here in the list view we can see the remainder with date, time and we can also have buttons to edit and delete the remainder.
 
-![Task List Activity](https://github.com/nrajubn/WeRemindYou/blob/master/Images/ScheduledRemainder.jpeg)
+<img src=
+"https://github.com/nrajubn/WeRemindYou/blob/master/Images/ListOfRemainder.jpeg.jpeg"
+        alt="TaskList Activity" width="300" height="300">
 
 - when the user set a particular reminder, those reminders will appear in the main activity/dashboard.
 
-![Scheduled Remainder](https://github.com/nrajubn/WeRemindYou/blob/master/Images/ScheduledRemainder.jpeg)
+<img src=
+"https://github.com/nrajubn/WeRemindYou/blob/master/Images/ScheduledRemainder.jpeg"
+        alt="ScheduleRemainder" width="300" height="300">
 
 ## Ringing Activity:
 
 - User can dismiss the alarm or snooze it for a particular time.
 
-![RingingActivity](https://github.com/nrajubn/WeRemindYou/blob/master/Images/RingingActivity.PNG)
+<img src=
+"https://github.com/nrajubn/WeRemindYou/blob/master/Images/RingingActivity.PNG"
+        alt="RingingActivity" width="300" height="300">
 
 - When the user sets an alarm, a pop-up message will appear about the alarm snooze time like in the below screen.
 
-![snooze](https://github.com/nrajubn/WeRemindYou/blob/master/Images/Snooze.png)
+<img src=
+"https://github.com/nrajubn/WeRemindYou/blob/master/Images/Snooze.png"
+        alt="Snooze" width="300" height="300">
 
 ## Menu Bar Activity:
 
 - In the menu bar, there are different options like dashboard, Rate Us, About Us
 
-![Menu](https://github.com/nrajubn/WeRemindYou/blob/master/Images/Menu.jpeg)
+<img src=
+"https://github.com/nrajubn/WeRemindYou/blob/master/Images/Menu.jpeg"
+        alt="Menu" width="300" height="300">
 
 - In the main dashboard, created reminders will be shown.
 
-![Dashboard](https://github.com/nrajubn/WeRemindYou/blob/master/Images/Dashboard.jpeg)
+<img src=
+"https://github.com/nrajubn/WeRemindYou/blob/master/Images/Dashboard.jpeg"
+        alt="Dashboard" width="300" height="300">
 
 - AboutUs page describes about the app.
 
-![AboutUs](https://github.com/nrajubn/WeRemindYou/blob/master/Images/AboutUs.PNG)
+<img src=
+"https://github.com/nrajubn/WeRemindYou/blob/master/Images/AboutUs.PNG"
+        alt="AboutUs" width="300" height="300">
 
 - RateUs page allows the user to rate the application.
 
-![RateUs](https://github.com/nrajubn/WeRemindYou/blob/master/Images/RateUs.jpeg)
+<img src=
+"https://github.com/nrajubn/WeRemindYou/blob/master/Images/RateUs.jpeg"
+        alt="RateUs" width="300" height="300">
 
 - RateUs page allows the user to rate the application.
 
-![Rating](https://github.com/nrajubn/WeRemindYou/blob/master/Images/Rating.jpeg)
+<img src=
+"https://github.com/nrajubn/WeRemindYou/blob/master/Images/Rating.jpeg"
+        alt="RateUs" width="300" height="300">
 
 ## Supported Devices
 - only works in android devices
