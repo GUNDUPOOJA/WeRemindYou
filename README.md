@@ -26,8 +26,8 @@ Users can keep the track of their day to day tasks. We Remind You app can be use
 - Application opens up with a main page where the user can set the reminder by clicking on New Reminder button.
 - After clicking on the New Reminder, create reminder page shows up where the user can create the reminder by entering the details like reminder name, a checkbox to enable or disable it, select the date,time and location and also choose the priority like medium,high,low.
 - There is also an alarm that will snooze for every 10 minutes that reminds the user about the reminder.
-- There are colors for the priority that will differentiate between the high,medium, and low reminders as choosen by the user, i.e Green color for high priority,Red for low, Yellow for green.
-- In the dashboard menu,there are about Us and rateus options, about Us mainly tells about how the app works, rate Us option allows users to rate the application.
+- There are colors for the priority that will differentiate between the high,medium, and low reminders as choosen by the user, i.e Red color for high priority,Green for low, Blue for medium.
+- In the dashboard menu,there are help, about Us and rateus options, about Us mainly tells about how the app works, rate Us option allows users to rate the application.
 
 ## Layouts: 
 ## Main Activity: 
@@ -86,7 +86,7 @@ Users can keep the track of their day to day tasks. We Remind You app can be use
 - Always Get fresh code.
 - pull the fresh code(Fork and clone if this is the first time).
 
-## Steps for cloning repository using command line
+## Steps for cloning repository using command line :
 1. on github repo, navigate to the main page of the repository.
 2. click on the Code button on main page repository.
 3. After clicking on code, we can clone using HTTPS or SSH.Click on the respective tab and copy the URL provided.
@@ -98,6 +98,9 @@ Users can keep the track of their day to day tasks. We Remind You app can be use
 
 ## References :
 - [For adding API key](https://youtu.be/0ZSg58AV8r8)
+- ![sqlite](https://www.youtube.com/watch?v=yzwJr-JM7yc)
+- ![app logo](https://apkpure.com/alarm-clock-beyond-talking-alarm-radio-music/com.sentryapplications.alarmclock)
+- 
 
 ## Persist:
 <p>Once the user sets the reminder for alarm and after dismissing it still the user can view the remainder in the dashboard add they can edit or delete that remainder. </p>
