@@ -40,40 +40,67 @@ Users can keep the track of their day to day tasks. We Remind You app can be use
   
 ## Create Remainder Activity:
 - In this activity, users can create the reminder by entering the details like the reminder name, date, time,a checkbox to enable the reminder and also the priority like high,medium,low and the location option.
+
 ![AddRemainder](https://github.com/nrajubn/WeRemindYou/blob/master/Images/AddRemainder.jpeg)
+
 - In this Activity, Time dialog will appear for selecting the time while creating the reminder.
+
 ![TimePicker](https://github.com/nrajubn/WeRemindYou/blob/master/Images/TimePicker.jpeg)
+
 - while setting a new reminder, user can select the date from the date picker dialog.
+
 ![DatePicker](https://github.com/nrajubn/WeRemindYou/blob/master/Images/DatePicker.PNG)
+
 - Select location button to set the location. 
+
 ![Location](https://github.com/nrajubn/WeRemindYou/blob/master/Images/Location.jpeg)
+
 - In this Activity, google maps will appear on the screen when the user clicks on the select location button to set the location while creating a reminder.
+
 ![LocationPicker](https://github.com/nrajubn/WeRemindYou/blob/master/Images/LocationPicker.jpeg)
 
 ## Task List Activity:
 
 - It shows the dashboard and it also consists of list view where all the remainders can be seen.
+
 - Here in the list view we can see the remainder with date, time and we can also have buttons to edit and delete the remainder.
+
 ![Task List Activity](https://github.com/nrajubn/WeRemindYou/blob/master/Images/ScheduledRemainder.jpeg)
+
 - when the user set a particular reminder, those reminders will appear in the main activity/dashboard.
+
 ![Scheduled Remainder](https://github.com/nrajubn/WeRemindYou/blob/master/Images/ScheduledRemainder.jpeg)
 
 ## Ringing Activity:
+
 - User can dismiss the alarm or snooze it for a particular time.
-- ![RingingActivity](https://github.com/nrajubn/WeRemindYou/blob/master/Images/RingingActivity.PNG)
+
+![RingingActivity](https://github.com/nrajubn/WeRemindYou/blob/master/Images/RingingActivity.PNG)
+
 - When the user sets an alarm, a pop-up message will appear about the alarm snooze time like in the below screen.
-- ![snooze](https://github.com/nrajubn/WeRemindYou/blob/master/Images/Snooze.png)
+
+![snooze](https://github.com/nrajubn/WeRemindYou/blob/master/Images/Snooze.png)
 
 ## Menu Bar Activity:
+
 - In the menu bar, there are different options like dashboard, Rate Us, About Us
+
 ![Menu](https://github.com/nrajubn/WeRemindYou/blob/master/Images/Menu.jpeg)
+
 - In the main dashboard, created reminders will be shown.
+
 ![Dashboard](https://github.com/nrajubn/WeRemindYou/blob/master/Images/Dashboard.jpeg)
+
 - AboutUs page describes about the app.
+
 ![AboutUs](https://github.com/nrajubn/WeRemindYou/blob/master/Images/AboutUs.PNG)
+
 - RateUs page allows the user to rate the application.
+
 ![RateUs](https://github.com/nrajubn/WeRemindYou/blob/master/Images/RateUs.jpeg)
+
 - RateUs page allows the user to rate the application.
+
 ![Rating](https://github.com/nrajubn/WeRemindYou/blob/master/Images/Rating.jpeg)
 
 ## Supported Devices
