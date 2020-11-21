@@ -1,9 +1,9 @@
+## App Logo
 ![](logo.jpeg)
 
-## App name : WeRemindYou
+## App Name : WeRemindYou
 -  WeRemindYou app can be used to set reminders for the tasks for which they want to be reminded later.
-- users can set the reminders priority wise like high,medium,low.Also set the reminders based on current location, and create the reminders in specific date and time
-- without enabling it.
+- users can set the reminders priority wise like high,medium,low.Also set the reminders based on current location, and create the reminders in specific date and time without enabling it.
 
 ## Team Information: 
 <table>
@@ -23,6 +23,11 @@ Users can keep the track of their day to day tasks. We Remind You app can be use
 - Reminder app is a simple event management application in which we can set the remainders with priorities like high,medium,low. And also, we can set the remainders based on location.There will be pop-up window alerts and sound to make sure you don't miss any important event.
 
 ## Application Sequence Information:
+- Application opens up with a main page where the user can set the reminder by clicking on New Reminder button.
+- After clicking on the New Reminder, create reminder page shows up where the user can create the reminder by entering the details like reminder name, a checkbox to enable or disable it, select the date,time and location and also choose the priority like medium,high,low.
+- There is also an alarm that will snooze for every 10 minutes that reminds the user about the reminder.
+- There are colors for the priority that will differentiate between the high,medium, and low reminders as choosen by the user, i.e Green color for high priority,Red for low, Yellow for green.
+- In the dashboard menu,there are about Us and rateus options, about Us mainly tells about how the app works, rate Us option allows users to rate the application.
 
 ## Layouts: 
 ## Main Activity: 
