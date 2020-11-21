@@ -77,7 +77,7 @@ Users can keep the track of their day to day tasks. We Remind You app can be use
 - Here in the list view we can see the remainder with date, time and we can also have buttons to edit and delete the remainder.
 
 <img src=
-"https://github.com/nrajubn/WeRemindYou/blob/master/Images/ListOfRemainder.jpeg.jpeg"
+"https://github.com/nrajubn/WeRemindYou/blob/master/Images/ListOfRemainder.jpeg"
         alt="TaskList Activity" width="300" height="300">
 
 - when the user set a particular reminder, those reminders will appear in the main activity/dashboard.
