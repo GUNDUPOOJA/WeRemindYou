@@ -53,10 +53,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.AlarmViewHolder> {
         if(product.getHour()>12){
             int hour = product.getHour() - 12;
             product.setHour(hour);
-            date = product.getDay()+", "+product.getMonth()+" "+product.getDate()+" , "+product.getHour()+":"+product.getMinute()+" PM";
+            date = product.getDay()+", "+product.getMonth()+" "+product.getDate()
+                    +" , "+product.getHour()+":"+product.getMinute()+" PM";
         }
         else{
-            date = product.getDay()+", "+product.getMonth()+" "+product.getDate()+" , "+product.getHour()+":"+product.getMinute()+" AM";
+            date = product.getDay()+", "+product.getMonth()+" "+product.getDate()
+                    +" , "+product.getHour()+":"+product.getMinute()+" AM";
         }
         holder.tv_date.setText(date+"");
 

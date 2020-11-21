@@ -13,8 +13,8 @@ import java.util.List;
 public class DBHelper extends SQLiteOpenHelper {
 
     SQLiteDatabase db;
-    private static final String DATABASE_NAME = "Alarm1";
-    private static final String TABLE_NAME = "Alarms1";
+    private static final String DATABASE_NAME = "Alarm3";
+    private static final String TABLE_NAME = "Alarms";
 
 
     String CREATE_TABLE = "Create Table IF NOT EXISTS " + TABLE_NAME + " ( " +
@@ -28,7 +28,9 @@ public class DBHelper extends SQLiteOpenHelper {
             " date INTEGER," +
             " month String ," +
             " day TEXT," +
-            " location TEXT)";
+            " location TEXT," +
+            " lat TEXT," +
+            " lng TEXT)";
     public DBHelper(Context applicationcontext) {
         super(applicationcontext, DATABASE_NAME, null,1);
     }
@@ -51,7 +53,11 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public void updateAlarm(Alarm alarm){
         db =this.getWritableDatabase();
-        String q = "UPDATE "+ TABLE_NAME+" SET title='"+alarm.getTitle()+ "', enabled = '"+alarm.isEnabled()+"', priority = '"+alarm.getPriority()+"' , hour='"+alarm.getHour()+ "', minute = '"+alarm.getMinute()+"', date = '"+alarm.getDate()+"' , month='"+alarm.getMonth()+ "', day = '"+alarm.getDay()+"', location = '"+alarm.getLocation()+ "' WHERE _id="+alarm.getId();
+        String q = "UPDATE "+ TABLE_NAME+" SET title='"+alarm.getTitle()+ "', enabled = '"
+                +alarm.isEnabled()+"', priority = '"+alarm.getPriority()+"' , " +
+                "hour='"+alarm.getHour()+ "', minute = '"+alarm.getMinute()+"', date = '"
+                +alarm.getDate()+"' , month='"+alarm.getMonth()+ "', day = '"+alarm.getDay()+"'," +
+                " location = '"+alarm.getLocation()+ "' WHERE _id="+alarm.getId();
 
 
         Log.d("update",q);
@@ -81,7 +87,9 @@ public class DBHelper extends SQLiteOpenHelper {
                 String month = result.getString(8);
                 String day = result.getString(9);
                 String location = result.getString(10);
-                Alarm alarm = new Alarm(_id, alarm_id,title,enabled,priority,hour,minute,date,month,day,location);
+                String lat = result.getString(11);
+                String lng = result.getString(12);
+                Alarm alarm = new Alarm(_id, alarm_id,title,enabled,priority,hour,minute,date,month,day,location,lat,lng);
                 list.add(alarm);
             }
         }
@@ -105,10 +113,12 @@ public class DBHelper extends SQLiteOpenHelper {
 
         cv.put("month",alarm.getMonth());
         cv.put("day",alarm.getDay());
+        cv.put("location",alarm.getLocation());
+        cv.put("lat",alarm.getLat());
+        cv.put("lng",alarm.getLng());
 
         db.insert(TABLE_NAME,null,cv);
 
-        getAllData();
     }
 
     public ArrayList<Alarm> getAllData()
@@ -131,7 +141,9 @@ public class DBHelper extends SQLiteOpenHelper {
                 String month = result.getString(8);
                 String day = result.getString(9);
                 String location = result.getString(10);
-                Alarm alarm = new Alarm(_id, alarm_id,title,enabled,priority,hour,minute,date,month,day,location);
+                String lat = result.getString(11);
+                String lng = result.getString(12);
+                Alarm alarm = new Alarm(_id, alarm_id,title,enabled,priority,hour,minute,date,month,day,location,lat,lng);
 
                 list.add(alarm);
 
@@ -150,6 +162,8 @@ public class DBHelper extends SQLiteOpenHelper {
             Log.d("month",result.getString(8)+"");
             Log.d("day",result.getString(9)+"");
             Log.d("location",result.getString(10)+"");
+            Log.d("lat",result.getString(11)+"");
+            Log.d("lng",result.getString(12)+"");
         }
 
         db2.close();

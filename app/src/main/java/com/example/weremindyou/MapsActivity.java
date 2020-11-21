@@ -119,11 +119,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         if(getIntent().getStringExtra("action")!=null) {
             action = getIntent().getStringExtra("action");
             if (action.contains("true")) {
-                Log.d("Action hamza","edit");
+                Log.d("Action ","edit");
                 lat_from_edit = getIntent().getStringExtra("lat");
-                Log.d("Action hamza lat",lat_from_edit+"");
+                Log.d("Action lat",lat_from_edit+"");
                 lng_from_edit = getIntent().getStringExtra("lng");
-                Log.d("Action hamza lng",lng_from_edit+"");
+                Log.d("Action lng",lng_from_edit+"");
 
                 sydney = new LatLng(Double.valueOf(lat_from_edit), Double.valueOf(lng_from_edit));
             }
@@ -135,10 +135,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .draggable(true));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
 
-
-
         mapListners();
-
 
     }
 }

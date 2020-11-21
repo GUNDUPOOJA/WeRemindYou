@@ -14,6 +14,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
@@ -35,16 +36,18 @@ public class EditActivity extends AppCompatActivity {
     int selected_id =0;
     String action = "no";
     Intent i;
+    TextView tv_address;
     CheckBox enabled_checkbox;
     RadioGroup radioGroup;
     RadioButton selectedPriority,low,medium,high;
     EditText editText_Name;
     boolean isEnabled ;
-    String name,selectedRbText,selectedDay,selectedMonth;
+    String name,selectedRbText,selectedDay,selectedMonth,selectedAddress,lat,lng,selected_lat,selected_lng;
     Calendar calendar;
     Button dateButton;
     Button timeButton;
     Button btn_done;
+    Button btn_location;
     TimePickerDialog timePicker;
     DatePickerDialog datePicker;
     int mYear, mMonth, mDay, mHour, mMinute,enable=1,action_alarm_id;
@@ -68,9 +71,7 @@ public class EditActivity extends AppCompatActivity {
         timeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                calendar=Calendar.getInstance();
-                mHour = calendar.get(Calendar.HOUR_OF_DAY);
-                mMinute = calendar.get(Calendar.MINUTE);
+
                 // time picker dialog
                 timePicker = new TimePickerDialog(EditActivity.this, new TimePickerDialog.OnTimeSetListener() {
                     @Override
@@ -90,11 +91,6 @@ public class EditActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Get Current Date
-                calendar = Calendar.getInstance();
-                mYear = calendar.get(Calendar.YEAR);
-                mMonth = calendar.get(Calendar.MONTH);
-                mDay = calendar.get(Calendar.DAY_OF_MONTH);
-
                 datePicker = new DatePickerDialog(EditActivity.this,
                         new DatePickerDialog.OnDateSetListener() {
                             @Override
@@ -128,15 +124,27 @@ public class EditActivity extends AppCompatActivity {
             }
         });
 
+        btn_location.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(EditActivity.this,MapsActivity.class);
+                intent.putExtra("action",edit_action+"");
+                intent.putExtra("lat",selected_lat);
+                intent.putExtra("lng",selected_lng);
+                startActivityForResult(intent, 2);// Activity is started with requestCode 2
+            }
+        });
+
         btn_done.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 name = editText_Name.getText().toString();
                 isEnabled = ((CheckBox) findViewById(R.id.enabled)).isChecked();
+
                 int selectedRadioButtonId = radioGroup.getCheckedRadioButtonId();
                 if (selectedRadioButtonId != -1) {
                     selectedPriority = findViewById(selectedRadioButtonId);
-                    String selectedRbText = selectedPriority.getText().toString();
+                    selectedRbText = selectedPriority.getText().toString();
 //                    Toast.makeText(EditActivity.this, "Title: "+name+"\nEnabled: "+isEnabled +"\nPriority: "+selectedRbText, Toast.LENGTH_LONG).show();
                 } else {
                     Toast.makeText(EditActivity.this, "Nothing selected from the radio group", Toast.LENGTH_SHORT).show();
@@ -145,6 +153,7 @@ public class EditActivity extends AppCompatActivity {
                     enable = 1;
                 }
                 else enable = 0;
+
                 try {
                     scheduleAlarm(edit_action);
                 } catch (Exception e) {
@@ -152,6 +161,26 @@ public class EditActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+    // Call Back method  to get the Message form other Activity
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
+        super.onActivityResult(requestCode, resultCode, data);
+        // check if the request code is same as what is passed  here it is 2
+        if(requestCode==2)
+        {
+            String message=data.getStringExtra("Address");
+            String lat_map = Double.toString(data.getDoubleExtra("lat",0)) ;
+            String lng_map = Double.toString(data.getDoubleExtra("lng",0));
+            selectedAddress = message;
+            lat = lat_map ;
+            lng = lng_map;
+
+            tv_address.setText(selectedAddress);
+
+
+        }
     }
 
     private void init() {
@@ -178,6 +207,7 @@ public class EditActivity extends AppCompatActivity {
         i = new Intent(getApplicationContext(),MainActivity.class);
 
         editText_Name = findViewById(R.id.name);
+        tv_address = findViewById(R.id.placeadd);
         radioGroup = findViewById(R.id.radiobutton_priority);
         low = findViewById(R.id.low);
         medium = findViewById(R.id.medium);
@@ -186,12 +216,14 @@ public class EditActivity extends AppCompatActivity {
         enabled_checkbox = findViewById(R.id.enabled);
         btn_done = findViewById(R.id.done);
         dateButton = findViewById(R.id.date_button);
+        btn_location = findViewById(R.id.getadd);
         timeButton = findViewById(R.id.time_button);
         calendar = Calendar.getInstance();
+
         if(getIntent().getStringExtra("action")!=null){
             action = getIntent().getStringExtra("action");
 
-            Log.d("hamza",action_alarm_id+" ");
+            Log.d("alarm",action_alarm_id+" ");
 
             if(action.contains("edit")){
                 edit_action = true;
@@ -216,6 +248,10 @@ public class EditActivity extends AppCompatActivity {
 
                 selectedHour = arrayList.get(0).getHour();
                 selectedMinute = arrayList.get(0).getMinute();
+                tv_address.setText(arrayList.get(0).getLocation());
+                selectedAddress = arrayList.get(0).getLocation();
+                selected_lat = arrayList.get(0).getLat();
+                selected_lng = arrayList.get(0).getLng();
                 Log.d("priority 2",p+" ");
 
 
@@ -226,10 +262,10 @@ public class EditActivity extends AppCompatActivity {
     private void scheduleAlarm(boolean edit_action)  {
         int alarmId = new Random().nextInt(1000);
         Log.d("alarmId",selected_id+"");
-        Alarm alarm = new Alarm(selected_id,alarmId,name,enable,selectedRbText,selectedHour,selectedMinute,selectedDate,selectedMonth,selectedDay,"US");
+        Alarm alarm = new Alarm(selected_id,alarmId,name,enable,selectedRbText,selectedHour,selectedMinute,selectedDate,selectedMonth,selectedDay,selectedAddress,lat,lng);
         Log.d("edit before schedule",edit_action+"");
 
-        alarm.schedule(getApplicationContext(),alarm,calendar,edit_action);
+        alarm.schedule(getApplicationContext(),alarm,calendar,edit_action,false);
 
         Intent i =new Intent(this,MainActivity.class);
         startActivity(i);
@@ -237,12 +273,8 @@ public class EditActivity extends AppCompatActivity {
 
     public void onCancelClick(View view)
     {
-        setResult(RESULT_CANCELED, null);
-        finish();
+        startActivity(i);
     }
-
-
-
 
 
 }

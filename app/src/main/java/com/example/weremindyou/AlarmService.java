@@ -17,6 +17,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.core.app.NotificationCompat;
 
+import static com.example.weremindyou.AlarmBroadcastReceiver.LOCATION;
 import static com.example.weremindyou.AlarmBroadcastReceiver.TITLE;
 
 
@@ -38,10 +39,20 @@ public class AlarmService extends Service {
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        Intent notificationIntent = new Intent(this, Ringing.class);
-        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0);
+        String Title = intent.getStringExtra(TITLE);
+        String Location = intent.getStringExtra(LOCATION);
 
-        String alarmTitle = String.format("%s reminder (click me)", intent.getStringExtra(TITLE));
+        if(Title==null) Title = "Snoozed";
+        String alarmTitle = String.format("%s reminder (click me)", Title);
+        Intent notificationIntent = new Intent(this, Ringing.class);
+
+        notificationIntent.putExtra("title",Title);
+        notificationIntent.putExtra("location",Location);
+        notificationIntent.setAction(Long.toString(System.currentTimeMillis()));
+
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+
 
 //        Notification notification = new NotificationCompat.Builder(this, CHANNEL_ID)
 //                .setContentTitle(alarmTitle)
@@ -74,7 +85,7 @@ public class AlarmService extends Service {
         long[] pattern = { 0, 100, 1000 };
         vibrator.vibrate(pattern, 0);
 
-        //startForeground(1, notification);
+        startForeground(1, notification);
 
 
         return START_STICKY;

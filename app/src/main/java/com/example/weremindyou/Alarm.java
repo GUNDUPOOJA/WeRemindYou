@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import java.util.Calendar;
 
+import static android.Manifest.permission_group.LOCATION;
 import static com.example.weremindyou.AlarmBroadcastReceiver.TITLE;
 
 public class Alarm {
@@ -18,9 +19,9 @@ public class Alarm {
     private int alarmId;
     private int hour, minute;
     private int enabled,date;
-    private String title,priority,day,month,location;
+    private String title,priority,day,month,location, lat, lng;
 
-    public Alarm(int id,int alarmId, String title , int enabled, String priority, int hour, int minute, int date,  String month, String day, String location) {
+    public Alarm(int id,int alarmId, String title , int enabled, String priority, int hour, int minute, int date,  String month, String day, String location, String lat, String lng) {
         this.id = id;
         this.alarmId = alarmId;
         this.hour = hour;
@@ -32,7 +33,15 @@ public class Alarm {
         this.title = title;
         this.priority = priority;
         this.location = location;
+        this.lat = lat;
+        this.lng = lng;
     }
+
+    public Alarm() {
+
+    }
+
+
     public int getId() {
         return id;
     }
@@ -108,6 +117,22 @@ public class Alarm {
         this.title = title;
     }
 
+    public String getLat() {
+        return lat;
+    }
+
+    public void setLat(String lat) {
+        this.lat = lat;
+    }
+
+    public String getLng() {
+        return lng;
+    }
+
+    public void setLng(String lng) {
+        this.lng = lng;
+    }
+
     public String getPriority() {
         return priority;
     }
@@ -115,17 +140,21 @@ public class Alarm {
     public void setPriority(String priority) {
         this.priority = priority;
     }
+
     public Alarm(int alarmId, int hour, int minute) {
         this.alarmId = alarmId;
         this.hour = hour;
         this.minute = minute;
     }
-    public void schedule(Context context, Alarm alarm,Calendar calendar,boolean edit_action) {
+
+    public void schedule(Context context, Alarm alarm,Calendar calendar,boolean edit_action,boolean snooze) {
         Log.d("edit inside schedule",edit_action+"");
         AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
 
         Intent intent = new Intent(context, AlarmBroadcastReceiver.class);
-        intent.putExtra(TITLE, title);
+        intent.putExtra(TITLE, alarm.getTitle());
+        intent.putExtra(LOCATION, alarm.getLocation());
+
         PendingIntent alarmPendingIntent = PendingIntent.getBroadcast(context, alarmId, intent, 0);
 //        Calendar calendar = Calendar.getInstance();
 //        calendar.setTimeInMillis(System.currentTimeMillis());
@@ -133,27 +162,30 @@ public class Alarm {
 //        calendar.set(Calendar.MINUTE, minute);
         calendar.set(Calendar.SECOND, 0);
         calendar.set(Calendar.MILLISECOND, 0);
+
         // if alarm time has already passed, increment day by 1
         if (calendar.getTimeInMillis() <= System.currentTimeMillis()) {
             calendar.set(Calendar.DAY_OF_MONTH, calendar.get(Calendar.DAY_OF_MONTH) + 1);
         }
-        String toastText = null;
-        try {
-            toastText = String.format("One Time Alarm %s scheduled for %s at %02d:%02d with_ID: %s", title, alarm.getDay(), alarm.getHour(), alarm.getMinute(), alarm.getAlarmId());
-            // toastText = String.format("One Time Alarm %s scheduled for %s at %02d:%02d", title, DayUtil.toDay(calendar.get(Calendar.DAY_OF_WEEK)), hour, minute, alarmId);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        Toast.makeText(context, toastText, Toast.LENGTH_LONG).show();
+        if(!snooze) {
+            String toastText = null;
+            try {
+                toastText = String.format("One Time Alarm %s scheduled for %s at %02d:%02d ", title, alarm.getDay(), alarm.getHour(), alarm.getMinute());
 
-        helper = new DBHelper(context);
-        if(edit_action){
-            Log.d("edit inside if",edit_action+"");
-            helper.updateAlarm(alarm);
-        }
-        else
-        {
-            helper.addAlarm(alarm);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            Toast.makeText(context, toastText, Toast.LENGTH_LONG).show();
+
+            helper = new DBHelper(context);
+            if (edit_action) {
+                Log.d("edit inside if", edit_action + "");
+                helper.updateAlarm(alarm);
+            } else {
+                helper.addAlarm(alarm);
+            }
+        }else {
+            Toast.makeText(context, "Alarm snoozed for 10 minutes", Toast.LENGTH_SHORT).show();
         }
         alarmManager.setExact(
                 AlarmManager.RTC_WAKEUP,

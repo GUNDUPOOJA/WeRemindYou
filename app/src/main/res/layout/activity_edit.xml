@@ -25,7 +25,6 @@
             <EditText
                 android:id="@+id/name"
                 style="@style/widget"
-                android:hint="Title "
                 android:singleLine="true" />
 
             <LinearLayout

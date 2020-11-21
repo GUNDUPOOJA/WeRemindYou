@@ -10,7 +10,9 @@ import android.widget.Toast;
 
 public class AlarmBroadcastReceiver extends BroadcastReceiver {
 
-    public static final String TITLE = "TITLE";
+    public static final String TITLE = "TITLE2";
+    public static final String LOCATION = "LOCATION2";
+
     @Override
     public void onReceive(Context context, Intent intent) {
         Log.d("Broadcast", "Received");
@@ -18,9 +20,11 @@ public class AlarmBroadcastReceiver extends BroadcastReceiver {
         Toast.makeText(context, toastText, Toast.LENGTH_SHORT).show();
         startAlarmService(context, intent);
     }
+
     private void startAlarmService(Context context, Intent intent) {
         Intent intentService = new Intent(context, AlarmService.class);
         intentService.putExtra(TITLE, intent.getStringExtra(TITLE));
+        intentService.putExtra(LOCATION, intent.getStringExtra(LOCATION));
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             context.startForegroundService(intentService);
         }

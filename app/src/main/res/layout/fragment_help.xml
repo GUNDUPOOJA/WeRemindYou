@@ -1,21 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-    <LinearLayout
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <TextView
-
-        android:layout_height="match_parent"
+        android:id="@+id/textView"
         android:layout_width="match_parent"
-        tools:layout_editor_absoluteY="149dp"
-        tools:layout_editor_absoluteX="102dp"
-        android:textStyle="bold" android:textSize="24sp"
-        android:text="About App: You can use this app to keep reminder of your tasks, where you can set the priorty low, medium and high. You can set the location also using the google maps. " android:padding="15dp"
+        android:layout_height="match_parent"
         android:layout_marginTop="50dp"
-        android:id="@+id/textView"/>
+        android:padding="15dp"
+        android:text="About App: You can use this app to keep reminder of your tasks,
+         where you can set the priorty low, medium and high. You can set the location also
+         using the google maps. "
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="102dp"
+        tools:layout_editor_absoluteY="149dp" />
 
 </LinearLayout>

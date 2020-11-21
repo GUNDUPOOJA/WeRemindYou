@@ -1,46 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:onClick="onDismissClick"
-    android:orientation="vertical"
-    android:padding="4dip">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/name"
-        android:layout_width="fill_parent"
-        android:layout_height="0sp"
-        android:layout_weight="2"
-        android:gravity="center"
-        android:padding="8dip"
-        android:text="alarm"
-        android:textSize="32dip"
-        android:textStyle="bold" />
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="0sp"
-        android:layout_weight="1"
-        android:orientation="horizontal"
-        android:padding="8dip">
+        android:id="@+id/textView_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:text="Ring Ring"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <View
-            android:layout_width="0sp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
+    <TextView
+        android:id="@+id/textView_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Location........"
+        android:layout_marginTop="30dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/textView_title"
+        />
 
-        <Button
-            android:id="@+id/dismiss"
-            android:layout_width="0sp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:onClick="onDismissClick"
-            android:text="Dismiss" />
+    <ImageView
+        android:id="@+id/activity_ring_clock"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:layout_constraintBottom_toTopOf="@+id/activity_ring_dismiss"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_location"
+        app:srcCompat="@drawable/ic_baseline_alarm_24" />
 
-        <View
-            android:layout_width="0sp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
+    <Button
+        android:id="@+id/activity_ring_dismiss"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Dismiss"
+        app:layout_constraintBottom_toTopOf="@+id/activity_ring_snooze"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    </LinearLayout>
+    <Button
+        android:id="@+id/activity_ring_snooze"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Snooze"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
