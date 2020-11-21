@@ -23,18 +23,21 @@ Users can keep the track of their day to day tasks. We Remind You app can be use
 - Reminder app is a simple event management application in which we can set the remainders with priorities like high,medium,low. And also, we can set the remainders based on location.There will be pop-up window alerts and sound to make sure you don't miss any important event.
 
 ## Application Sequence Information:
+
 - Application opens up with a main page where the user can set the reminder by clicking on New Reminder button.
 - After clicking on the New Reminder, create reminder page shows up where the user can create the reminder by entering the details like reminder name, a checkbox to enable or disable it, select the date,time and location and also choose the priority like medium,high,low.
 - There is also an alarm that will snooze for every 10 minutes that reminds the user about the reminder.
 - There are colors for the priority that will differentiate between the high,medium, and low reminders as choosen by the user, i.e Red color for high priority,Green for low, Blue for medium.
-- In the dashboard menu,there are help, about Us and rateus options, about Us mainly tells about how the app works, rate Us option allows users to rate the application.
+- In the dashboard menu,there are help, about Us and rate Us options, about Us mainly tells about how the app works, rate Us option allows users to rate the application.
 
-## Layouts: 
-## Main Activity: 
+## Layouts:
+
+## Main Activity:
 
 - It is the dashboard which shows the screen having menu bar for selecting Dashboard, Help, Rate US, and Exit.
--	We also have a button to create new remainder which takes us to the create remainder activity.
-![Main Activity](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/mainactivity.PNG)
+- We also have a button to create new remainder which takes us to the create remainder activity.
+
+![Main Activity](https://github.com/nrajubn/WeRemindYou/blob/master/Images/MainActivity.jpeg)
   
 ## Create Remainder Activity:
 
@@ -45,31 +48,36 @@ Users can keep the track of their day to day tasks. We Remind You app can be use
 - One button to set the time.
 - One button “Done” to set the remainder.
 - One button to cancel the remainder.
-![Create Remainder](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/createRemainder.PNG)
-![weRemindyou1.PNG](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/weRemindyou1.PNG)  
-  
+
+![AddRemainder](https://github.com/nrajubn/WeRemindYou/blob/master/Images/AddRemainder.jpeg)
+![TimePicker](https://github.com/nrajubn/WeRemindYou/blob/master/Images/TimePicker.jpeg)
+![LocationPicker](https://github.com/nrajubn/WeRemindYou/blob/master/Images/LocationPicker.jpeg)
+![Location](https://github.com/nrajubn/WeRemindYou/blob/master/Images/Location.jpeg)
+
 ## Task List Activity:
 
 - It shows the dashboard and it also consists of list view where all the remainders can be seen.
-- Here in the list view we can see the remainder with date, time and we can also have buttons to edit and delete the remainder.  
+- Here in the list view we can see the remainder with date, time and we can also have buttons to edit and delete the remainder.
 
-![Task List Activity](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/TaskListActivity.PNG)
-![weremindyou2.PNG](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/WeRemindyou2.PNG)  
-  
+![Task List Activity](https://github.com/nrajubn/WeRemindYou/blob/master/Images/ScheduledRemainder.jpeg)
+![Scheduled Remainder](https://github.com/nrajubn/WeRemindYou/blob/master/Images/ScheduledRemainder.jpeg)
+
 ## Ringing Activity:
 
 - It shows the page when the remainder is set and alarm ringing.
 - It shows the name/description of the remainder in TextView.
 - It also consists a button to dismiss the alarm which takes back to the dashboard.
-![Ringing Activity](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/RingingActivity.PNG)
-  
+
 ## Menu Bar Activity:
 
-- In this the activity for the menu bar will be present which shows Dashboard, Help, Rate Us and Exit. 
-- In this it navigates the screen by clicking on different items in the menu.  
-![Menu Bar Activity](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/MenuBarActivity.PNG)
-![aboutus.PNG](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/AboutUs.PNG)  
-![rateus.PNG](https://github.com/nrajubn/WeRemindYou/blob/master/proposed%20screens/RateUs.PNG)
+- In this the activity for the menu bar will be present which shows Dashboard, AboutUs, Rate Us.
+- In this it navigates the screen by clicking on different items in the menu.
+
+![Menu](https://github.com/nrajubn/WeRemindYou/blob/master/Images/Menu.jpeg)
+![Dashboard](https://github.com/nrajubn/WeRemindYou/blob/master/Images/Dashboard.jpeg)
+![AboutUs](https://github.com/nrajubn/WeRemindYou/blob/master/Images/AboutUs.PNG)
+![RateUs](https://github.com/nrajubn/WeRemindYou/blob/master/Images/RateUs.jpeg)
+![Rating](https://github.com/nrajubn/WeRemindYou/blob/master/Images/Rating.jpeg)
 
 ## Supported Devices
 - only works in android devices
@@ -77,7 +85,7 @@ Users can keep the track of their day to day tasks. We Remind You app can be use
 - Minimum sdk version 21 and target sdk version 29.
 
 ## Database:
-- We are using SQlite database for our android application. 
+- We are using SQLite database for our android application.
 - SQLite stores the data in structured manner. SQLite has higher performance.
 - SQLite databases can also be queried and the data retrieval is much more robust.
 - we are using this database to store the reminders,date,time,days, priorities,alarm and the timer.
@@ -98,9 +106,8 @@ Users can keep the track of their day to day tasks. We Remind You app can be use
 
 ## References :
 - [For adding API key](https://youtu.be/0ZSg58AV8r8)
-- [sqlite](https://www.youtube.com/watch?v=yzwJr-JM7yc)
+- [SQLite](https://www.youtube.com/watch?v=yzwJr-JM7yc)
 - [app logo](https://apkpure.com/alarm-clock-beyond-talking-alarm-radio-music/com.sentryapplications.alarmclock)
-
 
 ## Persist:
 <p>Once the user sets the reminder for alarm and after dismissing it still the user can view the remainder in the dashboard add they can edit or delete that remainder. </p>
