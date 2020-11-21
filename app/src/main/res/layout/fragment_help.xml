@@ -11,9 +11,8 @@
         android:layout_height="match_parent"
         android:layout_marginTop="50dp"
         android:padding="15dp"
-        android:text="About App: You can use this app to keep reminder of your tasks,
-         where you can set the priorty low, medium and high. You can set the location also
-         using the google maps. "
+        android:text="About App: This app allows you to create a reminder where you can click on the reminder button, add the date and time, set the priority to low, medium & high and you can also add the location(You need to drag the pin for your desired location).
+You can add multiple reminders at a time and the alarm gets pop with a ring and you can choose to dismiss or snooze it. "
         android:textSize="24sp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="102dp"
