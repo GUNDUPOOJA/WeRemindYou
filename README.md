@@ -157,6 +157,39 @@ Users can keep the track of their day to day tasks. We Remind You app can be use
 7. press "Enter"to create your local clone.
 8. Then open this folder using "Android studio" and then run this app using emulator.
 
+## Completion Status 
+
+1.	Welcome page - In this page there is an option to create a new reminder – Completed
+
+1.	Create reminder page where users can create a new reminder – Completed
+
+1.	Checkbox option to enable / disable the alarm in create reminder activity – Completed
+
+1.	User can still be able to view all the reminders in the dashboard as a list view even after selecting the disable option of the reminder - Completed
+
+1.	Displaying the date picker dialog box when user clicks on Date button when creating a new reminder – Completed
+
+1.	Displaying the Time picker dialog box when user clicks on Time button when creating a new reminder – Completed
+
+1.	Setting the priority for the reminder i.e high(visible in red color), medium(visible in blue color), low(visible in green color) in create reminder activity page – Completed
+
+1.	Selecting the location (using google maps) when user clicks on select location button while setting a new reminder – Completed
+
+1.	Displaying the place name and address of the selected location in the create reminder activity – Completed 
+
+1.	Generation of google maps API key for accessing google maps on our application – Completed
+
+1.	Main Activity - Displaying the reminders in the main dashboard – Completed
+
+1.	Ringing Activity - User can dismiss or snooze the alarm – Completed
+
+1.	Ringing Activity – When the user clicks on snooze the alarm will continuously ring – Completed
+
+1.	Rate us page – allows the user to rate the application – Completed
+
+1.	About us page – This page mainly describes about the application – Completed
+
+
 ## References :
 - [For adding API key](https://youtu.be/0ZSg58AV8r8)
 - [SQLite](https://www.youtube.com/watch?v=yzwJr-JM7yc)
