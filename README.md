@@ -40,7 +40,7 @@ Users can keep the track of their day to day tasks. We Remind You app can be use
 "https://github.com/nrajubn/WeRemindYou/blob/master/Images/MainActivity.jpeg"
         alt="Main Activity" width="300" height="300">
 
-## Create Remainder Activity:
+## Create Reminder Activity:
 - In this activity, users can create the reminder by entering the details like the reminder name, date, time,a checkbox to enable the reminder and also the priority like high,medium,low and the location option.
 
 <img src=
